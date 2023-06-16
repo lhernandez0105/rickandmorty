@@ -1,0 +1,12 @@
+<mat-list>
+<mat-list-item *ngFor="let item of characters.results">
+    <img matListAvatar [src]="item.image" alt="Character image">
+
+    <h3 matLine>{{ item.name }}</h3>
+    <p matLine>
+        status: {{ item.status}} . Species:{{item.species}}
+    </p>
+</mat-list-item>
+
+</mat-list>
+<!--Me trae la informacion de la API pero no me cargan los estilos SCSS-->

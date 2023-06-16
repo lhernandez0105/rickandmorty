@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MortyComponent } from './components/morty/morty.component';
 
 const routes: Routes = [
   {
     path:'',
-    loadChildren:() => import('./rick/rick.module').then(m => m.RickModule)
+    component:MortyComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class RickRoutingModule { }
